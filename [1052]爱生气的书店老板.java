@@ -70,6 +70,9 @@ class Solution {
 
         maxIncrease = increase;
 
+        // 窗口右移
+        // 如果右边是不满意的顾客 那么就加上
+        // 如果左边是不满意的顾客 那么就减去
         for (int i = minutes; i < customers.length; ++i) {
             if (grumpy[i] == 1) {
                 increase += customers[i];
